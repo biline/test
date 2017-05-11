@@ -1,0 +1,29 @@
+section#our-clients.pad-25
+    .container
+        .subpage-title
+            h5 #{t.ourclients}
+            //
+               Controls
+            .controls
+                span#client-prev.prev
+                    i.fa.fa-angle-left
+                span#client-next.next
+                    i.fa.fa-angle-right
+        .row.flush
+            #caroufredsel-clients-container(data-bind = "foreach: partners")
+                .col-xs-12.col-sm-4.col-md-3.client-wrapper
+                    a(href='#')
+                        img.img-responsive(data-bind="attr:{src:src, alt: alt}", alt='APC')
+                //
+                   /.client-wrapper
+                //
+                   /.client-wrapper
+            //
+               /#caroufredsel-clients-container
+        //
+           /.row
+    //
+       /.container
+    //
+       /#our-clients
+    //

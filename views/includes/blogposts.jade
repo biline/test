@@ -1,0 +1,58 @@
+section#blog-posts.pad-25
+    .container
+        .subpage-title
+            h5 #{t.latestnews}
+            //
+               Controls
+            .controls
+                span#blog-posts-prev.prev
+                    i.fa.fa-angle-left
+                span#blog-posts-next.next
+                    i.fa.fa-angle-right
+        .row.flush
+            #caroufredsel-blog-posts-container(data-bind = "foreach: blogposts")
+                .col-xs-12.col-sm-6.col-md-4
+                    article.post.pad-0
+                        .post-thumb(data-bind = "if: images.length === 1")
+                            a(data-bind = "attr: {href: images[0]}")
+                                img.img-responsive(data-bind ='attr:{src: images[0]}')
+                        //
+                           /.post-thumb
+                        .post-slider(data-bind = "if: images.length > 1")
+                            .carousel.slide(data-bind = "attr:{id: 'carousel-example-generic-'+$index()}")
+                                //
+                                   Wrapper for slides
+                                .carousel-inner(data-bind='foreach: images')
+                                    .item(data-bind='css:{active: $index() === 0}')
+                                        img.img-responsive(data-bind="attr:{src:$data}")
+                                //
+                                   Controls
+                                a.left.carousel-control(data-bind="attr:{href: '#carousel-example-generic-'+$index()}", data-slide='prev')
+                                    span.glyphicon.glyphicon-chevron-left
+                                a.right.carousel-control(data-bind="attr:{href: '#carousel-example-generic-'+$index()}", data-slide='next')
+                                    span.glyphicon.glyphicon-chevron-right
+                        .post-details
+                            h5.post-title
+                                a(data-bind='text: title, attr:{href: link}')
+                            span.post-meta
+                                i.fa.fa-time(data-bind = 'text: date')
+                        //
+                           /.post-details
+                    //
+                       /.post
+
+                    //
+                       /.post
+                //
+                   /.col-md-4
+
+                //
+                   /.col-md-4
+            //
+               /#caroufredsel-blog-posts-container
+        //
+           /.row
+    //
+       /.container
+    //
+       /#blog-posts

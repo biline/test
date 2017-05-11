@@ -1,0 +1,15 @@
+//extends layout
+block inner
+    section#projects.pad-25
+        .container
+            .subpage-title
+                h2 <font color="red">#{t.title}</font>
+                ul(data-bind="foreach: years")
+                    #projects-text(style='font-size: 1.5em; color: black')
+                        i.fa.fa-minus-square-o(data-bind="visible: currProject()[$data], click: expandService($data)")
+                        i.fa.fa-expand-o(data-bind="visible: !currProject()[$data], click: expandService($data)")
+                        |<b>&nbsp
+                        a(href='#' data-bind="text: $data, click: expandService($data)")
+                        |</b>
+                        ul(data-bind="foreach: getProjects($data)")
+                            li(data-bind="text: $data, visible: currProject()[$parent]")

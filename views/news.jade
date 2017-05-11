@@ -1,0 +1,16 @@
+//extends layout
+block inner
+    section#clients.pad-25
+        .container
+            .subpage-title
+                h2(style='color: black ') #{title}
+    //section#news.pad-25
+        .container
+            .subpage-title
+                h2 <font color="black">#{title}</font>
+                //ul(data-bind="foreach: news")
+                    font(size = "3", color="black")
+                        |<b>
+                        p(data-bind="text: date.split('T')[0]")
+                        |</b>
+                        p(data-bind="html: title")

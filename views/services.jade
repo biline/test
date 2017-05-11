@@ -1,0 +1,48 @@
+//extends layout
+block inner
+    section#services.pad-25
+        .container
+            .subpage-title
+                h2 <font color="red">#{t.title}</font>
+                font(size = "4", color="black")
+                    p #{t.intro}
+
+                        p
+                            i.fa.fa-minus-square-o(data-bind="visible: currServ()[1], click: expandService(1)")
+                            i.fa.fa-expand-o(data-bind="visible: !currServ()[1], click: expandService(1)")
+                            span <a href="#" data-bind="click: expandService(1)"><b>&nbsp#{t.consulting.title} </b></a>
+                                ul(data-bind="visible: currServ()[1]")
+
+                                    li #{t.consulting.texts[0]}
+                                    li #{t.consulting.texts[1]}
+                                    li #{t.consulting.texts[2]}
+                        p
+                        p
+                            i.fa.fa-minus-square-o(data-bind="visible: currServ()[2], click: expandService(2)")
+                            i.fa.fa-expand-o(data-bind="visible: !currServ()[2], click: expandService(2)")
+                            span <a href="#" data-bind="click: expandService(2)"><b>&nbsp#{t.installations.title} </b></a>
+                                    ul(data-bind="visible: currServ()[2]")
+                                        li #{t.installations.texts[0]}
+                                        li #{t.installations.texts[1]}
+                                        li #{t.installations.texts[2]}
+                                        li #{t.installations.texts[3]}
+                        p
+                            i.fa.fa-minus-square-o(data-bind="visible: currServ()[3], click: expandService(3)")
+                            i.fa.fa-expand-o(data-bind="visible: !currServ()[3], click: expandService(3)")
+                            span <a href="#" data-bind="click: expandService(3)"><b>&nbsp#{t.techsup.title} </b></a>
+                                ul(data-bind="visible: currServ()[3]")
+                                    li #{t.techsup.texts[0]}
+                                    li #{t.techsup.texts[1]}
+                                    li #{t.techsup.texts[2]}
+                                    //li #{t.techsup.texts[3]}
+
+                        p
+                            //i.fa.fa-expand-o(data-bind="visible: !currServ()[1]")
+                            span <b>&nbsp#{t.distribution}</b>
+                        p
+                            //i.fa.fa-expand-o(data-bind="visible: !currServ()[1]")
+
+                            span <b>&nbsp#{t.sysintegration}</b>
+                        p
+                            //i.fa.fa-expand-o(data-bind="visible: !currServ()[1]")
+                            span <b>&nbsp#{t.localization}</b>

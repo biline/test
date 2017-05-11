@@ -1,0 +1,53 @@
+nav.navbar.navbar-default(role='navigation')
+    .container
+        //
+           Brand and toggle get grouped for better mobile display
+        .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.navbar-brand(href="#home")
+                | <font color="red">#{t.home}</font>
+                span
+        //
+           Collect the nav links, forms, and other content for toggling
+        .collapse.navbar-collapse.navbar-ex1-collapse
+            ul.nav.navbar-nav
+                li.dropdown(data-bind="css: {active: currPage() == '#aboutus'}")
+                    a.dropdown-toggle(href="#aboutus") #{t.nav.aboutus}
+                li.dropdown(data-bind="css: {active: currPage() == '#services'}")
+                    a.dropdown-toggle(href="#services") #{t.nav.services}
+                li.dropdown(data-bind="css: {active: currPage() === '#projects'}")
+                    a.dropdown-toggle(href='#projects') #{t.nav.projects}
+                li.dropdown(data-bind="css: {active: currPage() === '#news'}")
+                    a.dropdown-toggle(href='#news') #{t.nav.news}
+                li.dropdown(data-bind="css: {active: currPage() === '#contacts'}")
+                    a.dropdown-toggle(href='#contacts') #{t.nav.contacts}
+                li.dropdown(data-bind="css: {active: currPage() === '#clients'}")
+                    a.dropdown-toggle(href='#clients') #{t.nav.clients}
+                li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown')
+                        img(src = "assets/flags/"+lang+".png")
+                    ul(class='dropdown-menu')
+                        if lang != 'ru'
+                            li
+                                a(href='#' data-bind="click: changeLang('ru')")
+                                    img(src = "assets/flags/ru.png")
+                        if lang != 'en'
+                            li
+                                a(href='#' data-bind="click: changeLang('en')")
+                                    img(src = "assets/flags/en.png")
+                        if lang != 'hy'
+                            li
+                                a(href='#' data-bind="click: changeLang('hy')")
+                                    img(src = "assets/flags/hy.png")
+            //
+               /.nav
+        //
+           /.navbar-collapse
+    //
+       /.container
+    //
+       /.navbar
