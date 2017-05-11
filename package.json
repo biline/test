@@ -22,6 +22,6 @@
     "grunt-contrib-jade": "^0.13.0"
   },
   "engines": {
-    "node": "0.10.41"
+   "node": "0.12.0"
   }
 }
