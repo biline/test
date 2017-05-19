@@ -18,7 +18,7 @@ module.exports = {
     stayconnected: 'Stay Connected',
     latestnews: 'Latest News',
     contactDetails:{
-        address: 'str. Khankyan 50, Yerevan, Armenia',
+        address: 'str. Khanjyan 50, Yerevan, Armenia',
         telephone: 'tel:  +374 10 57 88 25, +374 10 57 66 59, +374 57 33 58',
         fax: 'fax: +374 10 57 45 59',
         serviceCenter: 'service centre:  +374 10 56 11 91',
