@@ -12,7 +12,7 @@ var env = process.env.NODE_ENV || 'dev';
 var config = require('./config');
 
 require('./init')(config);
-
+process.chdir(__dirname);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
