@@ -78,7 +78,7 @@ module.exports = {
     },
     ourservices:{
         info:{
-            title: '19 years of leadership',
+            title: '22 years of leadership',
             text: 'On Armenian IT-market. One of the largest taxpayers in the IT field in Armenia.'
         },
         support:{
